@@ -7,6 +7,12 @@ Robot Delivery game
 # Assign areas using a dictionary
 delivery_area = {"Downtown": 1, "Suburbs": 2, "Industrial": 3}
 
+distance = {}
+
+weight = {}
+
+weather = {"Clear": 1, "Rain": 2, "Storm":3}  
+
 
 # Get 3 robot names
 def name_area1():
@@ -69,6 +75,7 @@ def name_area3():
     Gets name and area of robot 3
     
     """
+
     while True:
         n3 = input("Enter robot name: ").strip().title()
         a3 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
@@ -90,8 +97,28 @@ def name_area3():
 
 
 
-# Get total delivery distance (1-500km)
+# Get total delivery distance (5-500km)
 def distance():
+    """
+    Get and check distance
+    
+    """
+
+    while True:
+        range = input("Enter total delivery distance (5-500 km): ")
+
+        if range > 500:
+            print("Number too high!")
+
+        elif range < 5:
+            print("Number too low!")
+
+        elif range > 5 and < 500:
+            return range
+
+        else:
+            print("Please enter a valid number.")
+        
 
 
 # Get individual cargo weight (1-50kg)

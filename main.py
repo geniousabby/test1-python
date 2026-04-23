@@ -42,8 +42,27 @@ def name_area2():
     Gets name and area of robot 2.
     
     """
-    n2 = input("Enter robot name: ").strip().title()
-    a2 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
+
+    while True:
+        n2 = input("Enter robot name: ").strip().title()
+        a2 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
+
+        if a2 == "Downtown":
+            delivery_area =["Downtown"] = n2
+            return delivery_area
+
+        elif a2 == "Suburbs":
+            delivery_area =["Suburbs"] = n2
+            return delivery_area
+        
+        elif a2 == "Industrial":
+            delivery_area =["Industrial"] = n2
+            return delivery_area
+
+        else:
+            print("Please enter a valid location.")
+
+
 
 
 def name_area3():

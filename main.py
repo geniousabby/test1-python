@@ -64,27 +64,46 @@ def name_area2():
 
 
 
-
 def name_area3():
     """
     Gets name and area of robot 3
     
     """
-    n3 = input("Enter robot name: ").strip().title()
-    a3 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
+    while True:
+        n3 = input("Enter robot name: ").strip().title()
+        a3 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
+
+        if a3 == "Downtown":
+            delivery_area =["Downtown"] = n3
+            return delivery_area
+
+        elif a3 == "Suburbs":
+            delivery_area =["Suburbs"] = n3
+            return delivery_area
+        
+        elif a3 == "Industrial":
+            delivery_area =["Industrial"] = n3
+            return delivery_area
+
+        else:
+            print("Please enter a valid location.")
 
 
 
 # Get total delivery distance (1-500km)
+def distance():
 
 
 # Get individual cargo weight (1-50kg)
+def weight():
 
 
 # Get weather condition
+def weather():
 
 
 # Deployment status (safe or unsafe)
+def deploy():
 
 
 # Main function

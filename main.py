@@ -15,8 +15,26 @@ def name_area1():
     
     """
 
-    n1 = input("Enter robot name: ").strip().title()
-    a1 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
+    while True:
+
+        n1 = input("Enter robot name: ").strip().title()
+        a1 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
+                
+        if a1 == "Downtown":
+            delivery_area =["Downtown"] = n1
+            return delivery_area
+
+        elif a1 == "Suburbs":
+            delivery_area =["Suburbs"] = n1
+            return delivery_area
+        
+        elif a1 == "Industrial":
+            delivery_area =["Industrial"] = n1
+            return delivery_area
+
+        else:
+            print("Please enter a valid location.")
+
 
 
 def name_area2():
@@ -48,5 +66,6 @@ def name_area3():
 
 
 # Deployment status (safe or unsafe)
+
 
 # Main function

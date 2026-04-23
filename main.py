@@ -107,3 +107,28 @@ def deploy():
 
 
 # Main function
+def main():
+    """
+    Main function that calls the other functions.
+
+    """
+
+    name_area1()
+
+    name_area2()
+
+    name_area3()
+
+    distance()
+
+    weight()
+
+    weather()
+
+    deploy()
+
+
+
+# Run main function
+if __name__ == "__main__":
+    main()

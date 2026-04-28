@@ -9,11 +9,11 @@ delivery_area = {"Downtown": 1, "Suburbs": 2, "Industrial": 3}
 
 robot = {}
 
-distance = {}
+distance_dictionary = {}
 
-weight = {}
+weight_dictionary = {}
 
-weather = {"Clear": 1, "Rain": 2, "Storm":3}  
+weather_dictionary = {"Clear": 1, "Rain": 2, "Storm": 3}
 
 
 # Get 3 robot names
@@ -26,8 +26,9 @@ def name_area1():
     while True:
 
         n1 = input("Enter robot name: ").strip().title()
-        a1 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
-                
+        a1 = input("Choose a delivery zone for Apex (Downtown, Suburbs, " \
+        "Industrial): ").strip().title()
+
         if a1 == "Downtown":
             robot[n1] = a1
             return delivery_area
@@ -35,7 +36,7 @@ def name_area1():
         elif a1 == "Suburbs":
             robot[n1] = a1
             return delivery_area
-        
+
         elif a1 == "Industrial":
             robot[n1] = a1
             return delivery_area
@@ -53,7 +54,8 @@ def name_area2():
 
     while True:
         n2 = input("Enter robot name: ").strip().title()
-        a2 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
+        a2 = input("Choose a delivery zone for Apex (Downtown, Suburbs, " \
+        "Industrial): ").strip().title()
 
         if a2 == "Downtown":
             robot[n2] = a2
@@ -62,7 +64,7 @@ def name_area2():
         elif a2 == "Suburbs":
             robot[n2] = a2
             return delivery_area
-        
+
         elif a2 == "Industrial":
             robot[n2] = a2
             return delivery_area
@@ -80,7 +82,8 @@ def name_area3():
 
     while True:
         n3 = input("Enter robot name: ").strip().title()
-        a3 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
+        a3 = input("Choose a delivery zone for Apex (Downtown, Suburbs, " \
+        "Industrial): ").strip().title()
 
         if a3 == "Downtown":
             robot[n3] = a3
@@ -89,7 +92,7 @@ def name_area3():
         elif a3 == "Suburbs":
             robot[n3] = a3
             return delivery_area
-        
+
         elif a3 == "Industrial":
             robot[n3] = a3
             return delivery_area
@@ -105,44 +108,101 @@ def distance():
     Get and check distance
     
     """
-
     while True:
-        range = input("Enter total delivery distance (5-500 km): ")
+        d = input("Enter total delivery distance (5-500 km): ")
 
-        if range > 500:
+        if d > 500:
             print("Number too high!")
 
-        elif range < 5:
+        elif d < 5:
             print("Number too low!")
 
-        elif range > 5 and < 500:
-            return range
+        elif d > 5:
+            return distance_dictionary
+
+        elif d < 500:
+            return distance_dictionary
 
         else:
             print("Please enter a valid number.")
-        
+
 
 
 # Get individual cargo weight (1-50kg)
 def weight():
     """
-    Get weight of cargo
+    Get weight of cargo for robot 1
     
     """
     while True:
-        weight = input("Enter weight of cargo (1-50 kg): ")
+        w = input("Enter weight of cargo (1-50 kg): ")
 
-        if weight > 50:
+        if w > 50:
             print("Number too high!")
 
-        elif weight < 1:
+        elif w < 1:
             print("Number too low!")
 
-        elif weight > 1 and < 50:
-            return weight
+        elif w > 1:
+            return weight_dictionary
+
+        elif w < 50:
+            return weight_dictionary
 
         else:
             print("Please enter a valid number.")
+
+
+
+def weight2():
+    """
+    Get weight of cargo for robot 2
+    
+    """
+
+    while True:
+        w = input("Enter weight of cargo (1-50 kg): ")
+
+        if w > 50:
+            print("Number too high!")
+
+        elif w < 1:
+            print("Number too low!")
+
+        elif w > 1:
+            return weight_dictionary
+
+        elif w < 50:
+            return weight_dictionary
+
+        else:
+            print("Please enter a valid number.")
+
+
+
+def weight3():
+    """
+    Get weight of cargo for robot 3
+    
+    """
+    while True:
+        w = input("Enter weight of cargo (1-50 kg): ")
+
+        if w > 50:
+            print("Number too high!")
+
+        elif w < 1:
+            print("Number too low!")
+
+        elif w > 1:
+            return weight_dictionary
+
+        elif w < 50:
+            return weight_dictionary
+
+        else:
+            print("Please enter a valid number.")
+
 
 
 # Get weather condition
@@ -160,12 +220,13 @@ def weather():
 
         elif w == "Rain":
             return weather
-        
+
         elif w == "Storm":
             return weather
 
         else:
             print("Please enter a valid weather condition.")
+
 
 
 # Deployment status (safe or unsafe)
@@ -184,6 +245,7 @@ def deploy():
 
         elif weather == "Clear":
             print("Safe!")
+
 
 
 # Main function

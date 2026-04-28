@@ -125,6 +125,24 @@ def distance():
 
 # Get individual cargo weight (1-50kg)
 def weight():
+    """
+    Get weight of cargo
+    
+    """
+    while True:
+        weight = input("Enter weight of cargo (1-50 kg): ")
+
+        if weight > 50:
+            print("Number too high!")
+
+        elif weight < 1:
+            print("Number too low!")
+
+        elif weight > 1 and < 50:
+            return weight
+
+        else:
+            print("Please enter a valid number.")
 
 
 # Get weather condition

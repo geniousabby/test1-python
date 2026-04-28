@@ -7,6 +7,8 @@ Robot Delivery game
 # Assign areas using a dictionary
 delivery_area = {"Downtown": 1, "Suburbs": 2, "Industrial": 3}
 
+robot = {}
+
 distance = {}
 
 weight = {}
@@ -27,15 +29,15 @@ def name_area1():
         a1 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
                 
         if a1 == "Downtown":
-            delivery_area =["Downtown"] = n1
+            robot[n1] = a1
             return delivery_area
 
         elif a1 == "Suburbs":
-            delivery_area =["Suburbs"] = n1
+            robot[n1] = a1
             return delivery_area
         
         elif a1 == "Industrial":
-            delivery_area =["Industrial"] = n1
+            robot[n1] = a1
             return delivery_area
 
         else:
@@ -54,15 +56,15 @@ def name_area2():
         a2 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
 
         if a2 == "Downtown":
-            delivery_area =["Downtown"] = n2
+            robot[n2] = a2
             return delivery_area
 
         elif a2 == "Suburbs":
-            delivery_area =["Suburbs"] = n2
+            robot[n2] = a2
             return delivery_area
         
         elif a2 == "Industrial":
-            delivery_area =["Industrial"] = n2
+            robot[n2] = a2
             return delivery_area
 
         else:
@@ -81,15 +83,15 @@ def name_area3():
         a3 = input("Choose a delivery zone for Apex (Downtown, Suburbs, Industrial): ").strip().title()
 
         if a3 == "Downtown":
-            delivery_area =["Downtown"] = n3
+            robot[n3] = a3
             return delivery_area
 
         elif a3 == "Suburbs":
-            delivery_area =["Suburbs"] = n3
+            robot[n3] = a3
             return delivery_area
         
         elif a3 == "Industrial":
-            delivery_area =["Industrial"] = n3
+            robot[n3] = a3
             return delivery_area
 
         else:

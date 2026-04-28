@@ -147,6 +147,25 @@ def weight():
 
 # Get weather condition
 def weather():
+    """
+    Get weather condition
+    
+    """
+
+    while True:
+        w = input("Enter weather condition (Clear, Rain, Storm): ").strip().title()
+
+        if w == "Clear":
+            return weather
+
+        elif w == "Rain":
+            return weather
+        
+        elif w == "Storm":
+            return weather
+
+        else:
+            print("Please enter a valid weather condition.")
 
 
 # Deployment status (safe or unsafe)

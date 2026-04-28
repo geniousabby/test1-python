@@ -151,6 +151,20 @@ def weather():
 
 # Deployment status (safe or unsafe)
 def deploy():
+    """
+    Gives deploy message
+    
+    """
+
+    while True:
+        if weather == "Storm":
+            print("Unsafe!")
+
+        elif weather == "Rain":
+            print("Caution!")
+
+        elif weather == "Clear":
+            print("Safe!")
 
 
 # Main function
